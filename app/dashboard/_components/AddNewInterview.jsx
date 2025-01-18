@@ -17,6 +17,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { db } from "@/utils/db";
 import { useUser } from "@clerk/nextjs";
 import moment from "moment";
+import { useRouter } from "next/navigation";
 
 
 function AddNewInterview() {
@@ -27,6 +28,7 @@ function AddNewInterview() {
   const [loading, setLoading] = useState(false);
   const [jsonResponse, setJsonResponse] = useState([]);
   const { user } = useUser();
+  const route = useRouter();
   
 
   const onSubmit = async (e) => {
@@ -68,6 +70,10 @@ function AddNewInterview() {
           }).returning({ mockId: MockInterview.mockId });
           console.log("Inserted ID", res)
           setLoading(false);
+          if(res) {
+            setOpenDialog(false);
+            route.push(`/dashboard/interview/${res[0]?.mockId}`);
+          }
 
       } else {
         console.error("Error: Unable to extract JSON response");
