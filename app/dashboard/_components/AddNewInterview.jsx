@@ -19,7 +19,6 @@ import { useUser } from "@clerk/nextjs";
 import moment from "moment";
 import { useRouter } from "next/navigation";
 
-
 function AddNewInterview() {
   const [openDialog, setOpenDialog] = useState(false);
   const [jobPosition, setJobPosition] = useState("");
@@ -28,8 +27,7 @@ function AddNewInterview() {
   const [loading, setLoading] = useState(false);
   const [jsonResponse, setJsonResponse] = useState([]);
   const { user } = useUser();
-  const route = useRouter();
-  
+  const router = useRouter();
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -68,13 +66,8 @@ function AddNewInterview() {
             createdBy: user?.primaryEmailAddress?.emailAddress,
             createdAt: moment().format('DD-MM-YYYY'),
           }).returning({ mockId: MockInterview.mockId });
-          console.log("Inserted ID", res)
           setLoading(false);
-          if(res) {
-            setOpenDialog(false);
-            route.push(`/dashboard/interview/${res[0]?.mockId}`);
-          }
-
+          router.push(`dashboard/interview/${res[0]?.mockId}`);
       } else {
         console.error("Error: Unable to extract JSON response");
       }

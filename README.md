@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center">
   <img src="public\Banner.png" alt="AI Mock Interview App Logo" />
 </p>
@@ -26,6 +27,9 @@ AI Mock Interview App is a web application that helps users practice for job int
 - **Lucide React** (icons)
 - **Moment.js** (date formatting)
 - **React Webcam** (webcam integration)
+=======
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+>>>>>>> 188b2c85fe6ea32ecc20336e14f5466774add86c
 
 ## Getting Started
 
@@ -44,10 +48,14 @@ AI Mock Interview App is a web application that helps users practice for job int
    cd ai-mock-interview-app
    ```
 
+<<<<<<< HEAD
 2. **Install dependencies:**
    ```bash
    npm install
    ```
+=======
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+>>>>>>> 188b2c85fe6ea32ecc20336e14f5466774add86c
 
 3. **Configure environment variables:**
 
@@ -61,10 +69,14 @@ AI Mock Interview App is a web application that helps users practice for job int
    NEXT_PUBLIC_INFORMATION=Your informational message for users
    ```
 
+<<<<<<< HEAD
 4. **Push database schema (if needed):**
    ```bash
    npm run db:push
    ```
+=======
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+>>>>>>> 188b2c85fe6ea32ecc20336e14f5466774add86c
 
 5. **Run the development server:**
    ```bash
@@ -74,6 +86,7 @@ AI Mock Interview App is a web application that helps users practice for job int
 6. **Open the app:**
    Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
+<<<<<<< HEAD
 ## Usage
 
 - **Sign Up / Sign In:** Use Clerk authentication to access the dashboard.
@@ -105,3 +118,6 @@ MIT
 ---
 
 **Made with ❤️ for interview preparation.**
+=======
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+>>>>>>> 188b2c85fe6ea32ecc20336e14f5466774add86c
